@@ -7,11 +7,11 @@ type Data = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: any
 ) {
 	
 
-	let movies = [
+	const movies = [
 		{ id: 1, title: 'ドラえもん'},
 		{ id: 2, title: 'クレヨンしんちゃん'},
 		{ id: 3, title: '名探偵コナン'},
@@ -20,5 +20,5 @@ export default function handler(
 
 	]
 
-  res.status(200).json(movies)
+  res.status(200).json(movies);
 }
