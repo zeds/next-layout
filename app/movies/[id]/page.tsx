@@ -10,7 +10,7 @@ async function getMovie() {
 
 
 
-export default function Page({ params }) {
+export default function Page({ params }:{params:any}) {
 	console.log(params);
 	return <p className="text-3xl">Movie {params.id}</p>	
 }
