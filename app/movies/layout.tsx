@@ -13,12 +13,12 @@ async function getData() {
 }
 
 export default async function Layout({ children }:{children:any}) {
-  const movies = await getData();
+  const movies: any = await getData();
 	console.log("movies=", movies);
   return (
 		<div className="flex">
 			<ul className="pr-10 text-sm">
-				{movies.map((movie) => {
+				{movies.map((movie:any) => {
 					console.log("movie=", movie);
 					return (
 						<li key={movie.id}>
