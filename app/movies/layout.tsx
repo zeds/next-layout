@@ -12,7 +12,7 @@ async function getData() {
   return res.json();
 }
 
-export default async function Layout({ children }) {
+export default async function Layout({ children }:{children:any}) {
   const movies = await getData();
 	console.log("movies=", movies);
   return (
